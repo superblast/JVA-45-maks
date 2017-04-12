@@ -18,8 +18,17 @@ public class ZooDemo {
         Monkey monk2 = new Monkey("SecondName");
         Monkey monk3 = new Monkey("ThirdName");
 
+        Mouse mouse1 = new Mouse();
+        mouse1.voice();
+        mouse1.setName("Mini Mouse");
+        System.out.println(mouse1.getName());
+
         System.out.println("-----Print all ZOO------");
-        printAllAnimals(new Animal[] {monk1, monk2, monk3});
+//        same as in next 3 string
+        Animal [] animalsAll = new Animal [] {monk1, monk2, monk3, mouse1};
+        printAllAnimals(animalsAll);
+        System.out.println("-----Print all ZOO------");
+        printAllAnimals(new Animal[] {monk1, monk2, monk3, mouse1});
     }
 
     public static void printAllAnimals(Animal[] animals) {
